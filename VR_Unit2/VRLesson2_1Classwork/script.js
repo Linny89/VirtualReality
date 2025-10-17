@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded",function() {
   //Challenge 1: Create a variable scene for the <a-scene> component in the HTML
 
-
   //Challenge 2: Create a variable for <a-dodecahedron> and create it.
 
   
