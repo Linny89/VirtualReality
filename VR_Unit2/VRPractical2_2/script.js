@@ -3,34 +3,35 @@ let box;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); 
-  box = document.querySelector("#pokemonball");
-  box.a = 1;
-  box.da = 2;
+  poke = document.querySelector("#pokemonball");
+  poke.a = 1;
+  poke.da = 2;
   
   loop();
 })
 
 function loop(){
-  box.a += box.da;
-  box.setAttribute("rotation",{x:1, y:box.a, z:0});
+  poke.a += poke.da;
+  poke.setAttribute("rotation",{x:1, y:poke.a, z:0});
   window.requestAnimationFrame(loop);
 }
 
-let rnd = (l,u) => Math.floor(Math.random()*(u-l) + 2);
+
 
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); 
-  box = document.querySelector("#rocket");
-  box.a = 0;
-  box.da = 2;
+  rocket = document.querySelector("#car");
+  rocket.a = 0;
+  rocket.da = 2;
   
   loop();
 })
 
 function loop(){
-  box.a += box.da;
-  box.setAttribute("rotation",{x:2, y:box.a, z:0});
+  rocket.a += rocket.da;
+  rocket.setAttribute("rotation",{x:2, y:rocket.a, z:0});
   window.requestAnimationFrame(loop);
 }
+
 
