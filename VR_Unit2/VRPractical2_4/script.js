@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded",function() {
  
   for(let x = -10; x < 10; x += 2){
     for(let y = -10; y < 10; y += 2){
-      let r = new Rocket(x, 1, z);
+      let r = new Flyer(x, 1, z);
       flyer.push(r);
     }
   }
@@ -25,6 +25,8 @@ window.addEventListener("DOMContentLoaded",function() {
     window.requestAnimationFrame(loop);
   }
 
-  
+
 })
+
+
 
