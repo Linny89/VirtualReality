@@ -3,6 +3,8 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
     <script src="Flyer.js"></script>
+     <img id="Hole" src="grounf.jpg">
+      <img id="Stars" src="outspace.jpg">
   </head>
   <body>
       <a-scene>
@@ -27,8 +29,8 @@
         </a-entity>
 
       <!-- Camera is added so that you do not "spawn" at the origin -->
-        <a-plane position="0 0 -1" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-        <a-sky color="grey"></a-sky>
+        <a-plane position="0 0 -1" rotation="-90 0 0" width="100" height="100" src=#Hole"></a-plane>
+        <a-sky src="#Stars"></a-sky>
         <a-camera position="0 1.3 4"></a-camera>
 
     </a-scene>

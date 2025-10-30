@@ -19,7 +19,7 @@ class Flyer{
       this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append( this.obj )
   }
-  Fly(){
+  fly(){
     this.y += this.dy;
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
   }
