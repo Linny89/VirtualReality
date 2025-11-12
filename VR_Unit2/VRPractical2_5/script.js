@@ -11,16 +11,16 @@
 */
 
 let maze = [
+  "---CC--------------CCC-----",
   "----------------------",
+  "--------CCCC-------CC-----",
+  "----------CCCC------------",
   "----------------------",
+  "----CCC----------CCC--------",
   "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "---------------------CCC-",
+  "CCC----------------------",
+  "--------CCC------CC--------",
   "----------------------",
   "----------------------",
 ];
@@ -37,10 +37,17 @@ window.addEventListener("DOMContentLoaded",function() {
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
+
     /* Challenge 4
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "C"){
+        new Cone(c,1,r)
+      }
+    }
   }
-
-})
+  })
