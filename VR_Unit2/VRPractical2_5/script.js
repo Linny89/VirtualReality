@@ -11,18 +11,18 @@
 */
 
 let maze = [
-  "---CC--------------CCC-----",
-  "----------------------",
-  "--------CCCC-------CC-----",
+  "---CC------RRRRR--------CCC-----",
+  "------CCC--------RR--CCCC---CC---",
+  "--------CCCC----RR---CC-----",
   "----------CCCC------------",
-  "----------------------",
-  "----CCC----------CCC--------",
-  "----------------------",
-  "---------------------CCC-",
-  "CCC----------------------",
-  "--------CCC------CC--------",
-  "----------------------",
-  "----------------------",
+  "------RRRRR---CCCCC-------------",
+  "----CCC------RRR----CCC--------",
+  "------CCCCRRR--------CCCC--------",
+  "--CCC--------CC--RRRR---------CCC-",
+  "CCC----------CC------RRRRR----CCC--",
+  "--------CCC------CC-------RRRR-",
+  "-------CCCCC--------CCCCCC----RRRR---",
+  "---CCCCCC----RRR-------CCCCCC--------",
 ];
 
 /* Challenge 2
@@ -34,20 +34,18 @@ let scene;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   for(let r = 0; r < maze.length; r++){
-    /* Challenge 3
-      Choose a technique to traverse the each character in the string.
-    */ 
-
-    /* Challenge 4
-       Make an appropriate decision based on the characters you chose to enter 
-       in the maze.  Create an instance of the corresponding object.
-    */
+    
     let row = maze[r];
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "C"){
-        new Cone(c,1,r)
+        new Cone(c,0.5,r)
+      } else if(cols[c] == "R"){
+        new Rocks(c,0.5,r)
       }
     }
   }
   })
+
+
+ 
