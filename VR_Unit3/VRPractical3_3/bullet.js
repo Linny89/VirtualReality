@@ -1,6 +1,6 @@
 class Bullet{
   constructor(){
-    this.obj = document.createElement("a-sphere");
+    this.obj = document.createElement("a-cone");
     this.obj.setAttribute("radius",0.5)
     let pos = camera.object3D.position;
     this.obj.setAttribute("position",{x:pos.x,y:pos.y,z:pos.z});
